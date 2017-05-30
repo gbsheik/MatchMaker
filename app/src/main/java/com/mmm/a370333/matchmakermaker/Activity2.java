@@ -13,8 +13,8 @@ public class Activity2 extends Activity{
     public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.questionprompt);
-        Spinner questionNumber = (Spinner)findViewById(R.id.textField1);
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.questionCount, android.R.layout.simple_spinner_item);
+        Spinner questionNumber = (Spinner)findViewById(R.id.spn_questionAmount);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.sa_questionAmount, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         questionNumber.setAdapter(adapter);
 

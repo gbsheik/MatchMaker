@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">MatchMakerMaker</string>
-    <string name="amountPrompt">How many questions?</string>
-    <string-array name="questionCount">
+    <string name="str_questionAmount">How many questions?</string>
+    <string-array name="sa_questionAmount">
         <item>5</item>
         <item>10</item>
         <item>15</item>
