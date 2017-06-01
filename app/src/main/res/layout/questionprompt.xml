@@ -5,16 +5,36 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.mmm.a370333.matchmakermaker.MainActivity">
+    tools:context=".TitleScreen">
 
 
-    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-        android:text="Hello World!" android:id="@+id/HelloWorld"/>
-    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Back" android:layout_below="@+id/HelloWorld"/>
-    <Button android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_centerHorizontal="true" android:text="No" android:layout_below="@id/HelloWorld"
-        android:background="#3b803f" android:textColor="#ff0000" android:id="@+id/btn_next"/>
+    <TextView android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        android:id="@+id/HelloWorld"
+        android:layout_marginBottom="50dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/str_questionAmount"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/prompt"
+        android:layout_below="@id/HelloWorld"
+        />
     <Spinner
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" android:text="Enter How Many Questions:" android:id="@+id/textField1" android:layout_below="@id/btn_next"
+        android:layout_height="wrap_content"
+        android:text="Enter How Many Questions:"
+        android:id="@+id/spn_questionAmount"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/prompt"
+        android:layout_marginBottom="20dp"
         />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Next"
+        android:id="@+id/btn_next"
+        android:layout_below="@id/spn_questionAmount"/>
 </RelativeLayout>
