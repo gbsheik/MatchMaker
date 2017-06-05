@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 
-public class MainActivity extends AppCompatActivity {
+public class TitleScreen extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
         Button btn_next = (Button) findViewById(R.id.nextButton);
         btn_next.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view){
-                Intent int_next = new Intent(view.getContext(), Activity2.class);
+                Intent int_next = new Intent(view.getContext(), QuestionAmount.class);
                 startActivityForResult(int_next, 0);
             }
         });
