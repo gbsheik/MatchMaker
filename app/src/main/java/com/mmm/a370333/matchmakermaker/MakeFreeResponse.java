@@ -16,7 +16,6 @@ public class MakeFreeResponse extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.make_freeresponse);
 
-
         final Bundle bundle = getIntent().getExtras();
         int questionAmount = bundle.getInt("questionAmount");
 
@@ -35,7 +34,8 @@ public class MakeFreeResponse extends Activity {
             @Override
             public void onClick(View v) {
                 Intent int_next = new Intent(v.getContext(), QuestionType.class);
-                startActivityForResult(int_next, 0, bundleNew);
+                int_next.putExtras(bundleNew);
+                startActivityForResult(int_next, 0);
             }
         });
     }

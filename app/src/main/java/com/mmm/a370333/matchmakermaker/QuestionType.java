@@ -35,7 +35,8 @@ public class QuestionType extends Activity{
                     if (type.equals("Free Response")) {
 
                         Intent int_next = new Intent(v.getContext(), MakeFreeResponse.class);
-                        startActivityForResult(int_next, 0,bundle);
+                        int_next.putExtras(bundle);
+                        startActivityForResult(int_next, 0);
                     }
                 }
             });
