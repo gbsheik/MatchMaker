@@ -49,4 +49,12 @@
         android:layout_below="@id/pointsPrompt"
         android:id="@+id/spn_questionPoints"></Spinner>
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Next"
+        android:id="@+id/btn_next"
+        android:layout_below="@id/spn_questionPoints"/>
+
 </RelativeLayout>
