@@ -33,7 +33,9 @@ public class QuestionAmount extends Activity{
                 final Intent intentBundle = new Intent(v.getContext(), QuestionType.class);
                 bundle.putInt("questionAmount", (int) questionNumber.getSelectedItem());
                 intentBundle.putExtras(bundle);
-                int test = (Integer) intentBundle.getExtras().get("questionAmount");
+                //int test = (Integer) intentBundle.getExtras().get("questionAmount");
+                String[] qType = new String[(int)questionNumber.getSelectedItem()];
+                bundle.putStringArray("questionType", qType);
                 String[] fr_questions = new String[(int)questionNumber.getSelectedItem()];
                 bundle.putStringArray("fr_questions",fr_questions);
                 System.out.println(bundle.getStringArray("fr_questions"));
@@ -41,6 +43,12 @@ public class QuestionAmount extends Activity{
                 bundle.putStringArray("fr_answers",fr_answers);
                 int[] fr_points = new int[(int)questionNumber.getSelectedItem()];
                 bundle.putIntArray("fr_points",fr_points);
+                String[] mc_choices = new String[(int)questionNumber.getSelectedItem() * 3];
+                bundle.putStringArray("mc_choices", mc_choices);
+                int[] mc_points = new int[(int)questionNumber.getSelectedItem() * 3];
+                bundle.putIntArray("mc_points", mc_points);
+                String[] mc_questions = new String[(int)questionNumber.getSelectedItem()];
+                bundle.putStringArray("mc_questions", mc_questions);
                 Intent int_next = new Intent(v.getContext(), QuestionType.class);
                 //startActivityForResult(int_next, 0);
                 intentBundle.putExtras(bundle);

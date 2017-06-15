@@ -27,10 +27,11 @@ public class QuestionType extends Activity{
         bundle.putInt("questionAmount", questionAmount-1);
         System.out.println(questionAmount);
         questionAmount = (int) bundle.get("questionAmount");
+        String[] qType = bundle.getStringArray("questionType");
         final TextView questionNum = (TextView) findViewById(R.id.questionNumber);
         //questionNum.setText("asdf" + questionAmount);
 
-        if (questionAmount > 0) {
+        if (questionAmount >= 0) {
             setContentView(R.layout.questiontype);
             final Spinner questionType = (Spinner) findViewById(R.id.spn_questionType);
             ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.sa_questionType, android.R.layout.simple_spinner_item);
@@ -55,6 +56,7 @@ public class QuestionType extends Activity{
                 }
             });
         }
+
     }
 }
 

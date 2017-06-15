@@ -20,6 +20,10 @@ public class MakeFreeResponse extends Activity {
         final int questionNumber = (int)bundle.get("questionAmount");
         final String[] fr_questions = bundle.getStringArray("fr_questions");
         final String[] fr_answers = bundle.getStringArray("fr_answers");
+        final int[] fr_points = bundle.getIntArray("fr_points");
+        final String[] questionType = bundle.getStringArray("questionType");
+        questionType[questionNumber] = "fr";
+        bundle.putStringArray("questionType", questionType);
         System.out.println(fr_questions);
         //final Bundle bundle = getIntent().getExtras();
         //int questionAmount = bundle.getInt("questionAmount");
@@ -40,12 +44,26 @@ public class MakeFreeResponse extends Activity {
         btn_next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent int_next = new Intent(v.getContext(), QuestionType.class);
+                //Intent int_next = new Intent(v.getContext(), QuestionType.class);
                 fr_questions[questionNumber] = question.getText().toString();
                 fr_answers[questionNumber] = answer.getText().toString();
+                fr_points[questionNumber] = (int)pointValue.getSelectedItem();
+                bundle.putStringArray("fr_questions", fr_questions);
+                bundle.putStringArray("fr_answers", fr_answers);
+                bundle.putIntArray("fr_points", fr_points);
 
-                int_next.putExtras(bundle);
-                startActivityForResult(int_next, 0);
+                System.out.println(bundle.getInt("questionAmount"));
+
+                if (bundle.getInt("questionAmount") == 0) {
+                    Intent int_next = new Intent(v.getContext(), FinishMake.class);
+                    int_next.putExtras(bundle);
+                    startActivityForResult(int_next, 0);
+                }
+                else{
+                    Intent int_next = new Intent(v.getContext(), QuestionType.class);
+                    int_next.putExtras(bundle);
+                    startActivityForResult(int_next, 0);
+                }
             }
         });
     }

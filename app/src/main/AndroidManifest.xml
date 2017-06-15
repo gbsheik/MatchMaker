@@ -14,6 +14,8 @@
         <activity android:name=".QuestionAmount"></activity>
         <activity android:name=".QuestionType"></activity>
         <activity android:name=".MakeFreeResponse"></activity>
+        <activity android:name=".FinishMake"></activity>
+        <activity android:name=".MakeMultResponse"></activity>
     </application>
 
 </manifest>
