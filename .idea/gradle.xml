@@ -8,16 +8,11 @@
         <option name="gradleHome" value="$APPLICATION_HOME_DIR$/gradle/gradle-2.10" />
         <option name="modules">
           <set>
-            <option value="/Volumes/User Space/Users/370333/AndroidStudioProjects/MatchMakerMaker" />
-            <option value="/Volumes/User Space/Users/370333/AndroidStudioProjects/MatchMakerMaker/app" />
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/app" />
           </set>
         </option>
-        <option name="myModules">
-          <set>
-            <option value="/Volumes/User Space/Users/370333/AndroidStudioProjects/MatchMakerMaker" />
-            <option value="/Volumes/User Space/Users/370333/AndroidStudioProjects/MatchMakerMaker/app" />
-          </set>
-        </option>
+        <option name="resolveModulePerSourceSet" value="false" />
       </GradleProjectSettings>
     </option>
   </component>
