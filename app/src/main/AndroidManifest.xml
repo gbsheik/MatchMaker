@@ -19,6 +19,8 @@
         <activity android:name=".MatchTakerIntro"></activity>
 
         <activity android:name=".FinishMake"></activity>
+        <activity android:name=".TakeFreeResponse"></activity>
+        <activity android:name=".TakerEnding"></activity>
 
     </application>
 
