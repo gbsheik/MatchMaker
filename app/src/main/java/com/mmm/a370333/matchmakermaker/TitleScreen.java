@@ -14,6 +14,7 @@ public class TitleScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.title);
 
+
         Button btn_next = (Button) findViewById(R.id.nextButton);
         btn_next.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view){
@@ -25,8 +26,15 @@ public class TitleScreen extends AppCompatActivity {
         Button btn_take = (Button) findViewById(R.id.btn_take);
         btn_take.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view){
-                Intent int_next = new Intent(view.getContext(), MatchTakerIntro.class);
-                startActivityForResult(int_next, 0);
+                if(getIntent()==null) {
+                    Intent int_next = new Intent(view.getContext(), MatchTakerIntro.class);
+                    startActivityForResult(int_next, 0);
+                }
+                else {
+                    final Bundle bundle = getIntent().getExtras();
+                    String[] questions = bundle.getStringArray("questionType");
+
+                }
             }
         });
     }
