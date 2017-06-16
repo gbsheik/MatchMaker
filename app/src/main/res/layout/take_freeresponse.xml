@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text = ""
+        android:id="@+id/fr_question"
+        android:layout_marginBottom="12dp"
+        android:textSize="22dp"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Answer Here"
+        android:layout_marginRight="25dp"
+        android:layout_marginBottom="35dp"
+        android:layout_below="@id/fr_question"
+        android:id="@+id/fr_space"
+        android:ems="15"/>
+
+    <Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/spn_questionPoints"
+    android:layout_centerHorizontal="true"
+    android:text="Next"
+    android:id="@+id/btn_next"/>
+
+</RelativeLayout>
