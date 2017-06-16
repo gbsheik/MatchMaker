@@ -21,5 +21,13 @@ public class TitleScreen extends AppCompatActivity {
                 startActivityForResult(int_next, 0);
             }
         });
+
+        Button btn_take = (Button) findViewById(R.id.btn_take);
+        btn_take.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view){
+                Intent int_next = new Intent(view.getContext(), MatchTakerIntro.class);
+                startActivityForResult(int_next, 0);
+            }
+        });
     }
 }

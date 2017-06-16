@@ -7,6 +7,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:text="Multiple Choice"
+
         android:textSize="22dp"
         android:id="@+id/multChoice"
         android:layout_marginBottom="16dp"/>
@@ -41,6 +42,7 @@
         android:layout_height="wrap_content"
         android:layout_toRightOf="@id/choice1"
         android:id="@+id/answer1"
+
         android:layout_below="@id/et_question"
         android:ems="10"
         android:text=""
@@ -50,6 +52,7 @@
         android:layout_height="wrap_content"
         android:layout_toRightOf="@id/answer1"
         android:id="@+id/spn_pts1"
+
         android:layout_below="@id/et_question"/>
 
     <TextView
@@ -58,8 +61,10 @@
         android:layout_below="@id/choice1"
         android:text="  B:"
         android:id="@+id/choice2"
+
         android:textSize="22dp"
         android:layout_marginBottom="12dp"/>
+
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -75,6 +80,7 @@
         android:layout_toRightOf="@id/answer2"
         android:id="@+id/spn_pts2"
         android:layout_below="@id/choice1"/>
+
 
     <TextView
         android:layout_width="wrap_content"
@@ -100,14 +106,16 @@
         android:layout_below="@id/choice2"/>
 
 
-
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+
+
         android:text="Next"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/answer3"
         android:id="@+id/btn_next"/>
+
 
 
 
