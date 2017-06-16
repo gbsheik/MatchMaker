@@ -59,7 +59,7 @@ public class MakeMultResponse extends Activity{
                 bundle.putIntArray("mc_points", mc_points);
                 bundle.putStringArray("mc_quesitons", mc_questions);
 
-                if(bundle.getInt("questionAmount")==0){
+                if(questionNumber==0){
                     Intent int_next = new Intent(view.getContext(), FinishMake.class);
                     int_next.putExtras(bundle);
                     startActivityForResult(int_next, 0);

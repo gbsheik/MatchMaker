@@ -1,3 +1,4 @@
+
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="match_parent">
@@ -5,9 +6,19 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text = "Thank You. I hope your life is filled with love from now until the end of time!"
+        android:id="@+id/finalScore"
+        android:layout_centerHorizontal="true"
+        android:text=""
+        android:textSize="40dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text = "I hope your life is filled with love from now until the end of time!"
         android:id="@+id/thankYou"
         android:layout_marginBottom="30dp"
+        android:textSize="24dp"
+        android:layout_below="@id/finalScore"
         android:textSize="24dp"
         android:layout_centerHorizontal="true"/>
 
@@ -28,5 +39,9 @@
         android:layout_below="@id/returnText"
         android:id="@+id/btn_return"
         android:layout_centerHorizontal="true"/>
+
+
+
+
 
 </RelativeLayout>

@@ -43,9 +43,9 @@ public class QuestionAmount extends Activity{
                 bundle.putStringArray("fr_answers",fr_answers);
                 int[] fr_points = new int[(int)questionNumber.getSelectedItem()];
                 bundle.putIntArray("fr_points",fr_points);
-                String[] mc_choices = new String[(int)questionNumber.getSelectedItem() * 3];
+                String[] mc_choices = new String[(int)questionNumber.getSelectedItem() * 3+3];
                 bundle.putStringArray("mc_choices", mc_choices);
-                int[] mc_points = new int[(int)questionNumber.getSelectedItem() * 3];
+                int[] mc_points = new int[(int)questionNumber.getSelectedItem() * 3+3];
                 bundle.putIntArray("mc_points", mc_points);
                 String[] mc_questions = new String[(int)questionNumber.getSelectedItem()];
                 bundle.putStringArray("mc_questions", mc_questions);

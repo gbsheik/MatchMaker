@@ -26,14 +26,22 @@ public class TitleScreen extends AppCompatActivity {
         Button btn_take = (Button) findViewById(R.id.btn_take);
         btn_take.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view){
-                if(getIntent()==null) {
+                if(getIntent().getExtras() == null) {
                     Intent int_next = new Intent(view.getContext(), MatchTakerIntro.class);
                     startActivityForResult(int_next, 0);
                 }
                 else {
                     final Bundle bundle = getIntent().getExtras();
                     String[] questions = bundle.getStringArray("questionType");
-
+                    int questionNumber = 0;
+                    int pointsEarned = 0;
+                    if (questions[0].equals("mc")){
+                        bundle.putInt("questionNumber", questionNumber);
+                        bundle.putInt("pointsEarned", pointsEarned);
+                        Intent int_next = new Intent(view.getContext(), TakeMultResponse.class);
+                        int_next.putExtras(bundle);
+                        startActivityForResult(int_next, 0);
+                    }
                 }
             }
         });
